@@ -27,6 +27,9 @@ for i = 1:11
 end
 
 figure(4)
+title('Task 3')
+xlabel('Beta')
+ylabel('Partial Pressures')
 plot(beta2, PI2)
 hold on
 plot(beta2, PAbar2)
@@ -35,9 +38,6 @@ plot(beta2, Pabar2)
 hold on
 plot(beta2, Pv2)
 legend('PI','PAbar','Pabar','Pv')
-title('Task 3')
-xlabel('Beta')
-ylabel('Partial Pressures')
     
 
 
