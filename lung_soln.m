@@ -2,6 +2,6 @@
 clear all
 clf
 global Pstar cstar n maxcount M Q camax RT cI;
-setup_lung
+setup_lung_soln
 cvsolve
 outchecklung

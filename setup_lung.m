@@ -2,7 +2,8 @@
 %heterogeneity parameter (0<=beta<=1):
 %beta=0 for homogenous lung
 %beta=1 for no ventilation/perfusion correlation
-beta=0.5
+beta = 0.5
+%beta=0.1 %FOR TASK 4, go 0:0.1:1
 %
 %number of iterations used in bisection:
 maxcount=20
@@ -11,7 +12,7 @@ maxcount=20
 n=100
 %
 %reference oxygen concentration (moles/liter):
-cref=0.2/(22.4*(310/273))
+cref=0.2/(22.4*(310/273)) 
 %cref=concentration of oxygen 
 %in air at sea level at body temperature
 %
@@ -26,7 +27,8 @@ cstar=cref
 %in blood expressed in moles/liter)
 %
 %rate of oxygen consumption (moles/minute):
-M=0.25*cref*5.6
+M=0.25*cref*5.6 %comment out for task 4
+%M = 0.032 %FOR TASK 4. Trial and error
 %
 %oxygen partial pressure 
 %at which hemoglobin is half-saturated:
