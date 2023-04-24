@@ -2,42 +2,44 @@
 clear all
 clf
 global Pstar cstar n maxcount M Q camax RT cI;
-setup_lung
-cvsolve
-outchecklung
+% setup_lung
+% cvsolve
+% outchecklung
 
 %Task 3
-% beta2 = 0:0.1:1
-% PI2 = []
-% PAbar2 = []
-% Pabar2 = []
-% Pv2 = []
-% for i = 1:11
-%     
-%     beta = beta2(i)
-%     setup_lung
-%     cvsolve
-%     outchecklung
-% 
-%     PI2(i)=PI
-%     PAbar2(i)=PAbar
-%     Pabar2(i)=Pabar
-%     Pv2(i)=Pv
-% 
-% end
-% 
-% figure(4)
-% plot(beta2, PI2)
-% hold on
-% plot(beta2, PAbar2)
-% hold on
-% plot(beta2, Pabar2)
-% hold on
-% plot(beta2, Pv2)
-% legend('PI','PAbar','Pabar','Pv')
-% title('Task 3')
-% xlabel('Beta')
-% ylabel('Partial Pressures')
+
+PI2 = []
+PAbar2 = []
+Pabar2 = []
+Pv2 = []
+beta2 = 0:0.1:1
+
+for i = 1:11
+    
+    beta = beta2(i)
+    setup_lung
+    cvsolve
+    outchecklung
+
+    PI2(i)=PI
+    PAbar2(i)=PAbar
+    Pabar2(i)=Pabar
+    Pv2(i)=Pv
+
+end
+
+figure(4)
+plot(beta2, PI2)
+hold on
+plot(beta2, PAbar2)
+hold on
+plot(beta2, Pabar2)
+hold on
+plot(beta2, Pv2)
+legend('PI','PAbar','Pabar','Pv')
+title('Task 3')
+xlabel('Beta')
+ylabel('Partial Pressures')
 
 
 %Task 4
@@ -56,14 +58,36 @@ outchecklung
 %Beta = 0.9, M = 0.018
 %Beta = 1, M = 0.018
 
-Beta4 = [0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
-M4 = [0.029 0.029 0.029 0.029 0.029 0.029 0.025 0.023 0.022 0.018 0.018]
+% Beta4 = [0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+% M4 = [0.029 0.029 0.029 0.029 0.029 0.029 0.025 0.023 0.022 0.018 0.018]
+% 
+% figure(5)
+% plot(Beta4, M4)
+% title('Task 4')
+% xlabel('Beta')
+% ylabel('moles/minute')
 
-figure(5)
-plot(Beta4, M4)
-title('Task 4')
-xlabel('Beta')
-ylabel('moles/minute')
+%Task 5
+
+% PI2 = []
+% PAbar2 = []
+% Pabar2 = []
+% Pv2 = []
+% beta5 = 0:0.1:1
+% for i = 1:11
+%     setup_lung
+%     cvsolve
+%     outchecklung
+% 
+%     PI5(i)=PI
+%     PAbar5(i)=PAbar
+%     Pabar5(i)=Pabar
+%     Pv5(i)=Pv
+% 
+% end
+% 
+% %cI = 0.07
+
 
 
 

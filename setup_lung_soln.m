@@ -2,7 +2,7 @@
 %heterogeneity parameter (0<=beta<=1):
 %beta=0 for homogenous lung
 %beta=1 for no ventilation/perfusion correlation
-beta=1.0 %FOR TASK 4
+%beta=1.0 %FOR TASK 4
 %
 %number of iterations used in bisection:
 maxcount=20
